@@ -1,0 +1,112 @@
+@import 'base.css';
+/* ============================================================
+   flex：定义布局为盒模型
+   flex-v：盒模型垂直布局
+   flex-1：子元素占据剩余的空间
+   flex-align-center：子元素垂直居中
+   flex-pack-center：子元素水平居中
+   flex-pack-justify：子元素两端对齐
+   兼容性：ios 4+、android 2.3+、winphone8+
+   ============================================================ */
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-v {
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.flex-1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.flex-align-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.flex-pack-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.flex-pack-justify {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+/*******文本水平溢出************/
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html {
+  height: 100%;
+  background: lightblue;
+}
+body {
+  min-height: 100%;
+}
+#container {
+  width: 10rem;
+  background: #fff;
+  height: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+#container .headbar {
+  background: #FF5400;
+  padding: 6px 14px;
+  padding-left: 36px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-right: 14px;
+}
+#container .headbar .search-box {
+  height: 100%;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid #B52600;
+  background: #B52600;
+  border-radius: 5px;
+}
+#container .headbar .search-box i {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  color: #fff;
+  background-image: url('../ali-icon/search.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#container .headbar .search-box .search-text {
+  color: #fff;
+  height: 100%;
+  line-height: 24px;
+}
+#container .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+}
+#container .footer ul li {
+  width: 20%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}

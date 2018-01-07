@@ -1,0 +1,182 @@
+var hospitalData = [
+    {
+        id:1,
+        listData:[
+            {
+                qid:1,
+                question:'医院地址',
+                answer:'医院地址为：河北省唐山市路南区建设南路14号（百货大楼南行500米，大钊公园西门对面）。',
+            },
+            {
+                qid:2,
+                question:'医院二维码',
+                answer:`医院的二维码可以登陆官网查看，医院官网：'http://www.tsfy.com'。`,
+            },
+            {
+                qid:3,
+                question:'医院电话',
+                answer:`您好，唐山市妇幼保健院官方电话：0315-3726688`,
+            },
+            {
+                qid:4,
+                question:'门诊时间',
+                answer:`您好，门诊时间为周一到周日全天门诊，上午8:00-12:00，下午14:00-17:30。`,
+            },
+            {
+                qid:5,
+                question:'医生排班时间表',
+                answer:`您好，门诊时间为周一到周日全天门诊，上午8:00-12:00，下午14:00-17:30。请通过查询医生的排班情况，或到医院服务台咨询。`,
+            },
+
+            {
+                qid:6,
+                question:'预约挂号流程',
+                answer:'<a href="http://mp.weixin.qq.com/s/2pdW9UGHD5qoEPTJFB4v9A">预约挂号流程</a>',
+            },
+            {
+                qid:7,
+                question:'各科室分布地图',
+                answer:`<a href="http://mp.gzhc365.com/hosp_floor_map_001.xhtml?viewcode=html_ld&HIS_CD=77">各科室分布地图</a>`,
+            },
+            {
+                qid:8,
+                question:'如何办理医保报销？',
+                answer:`合作医疗、医保相关的问题请到医院服务台咨询,或拨打医院电话0315-3726688。目前微信支付只支持自费结算，如果您想刷医保卡或者要报销医保的，请移步医院收费窗口，凭处方单缴费。`,
+            },
+            {
+                qid:9,
+                question:'如何办理出生医学证明？',
+                answer:`<a href="http://mp.gzhc365.com/appno.xhtml?_route=f77&viewcode=html&HIS_CD=77&SCE_ID=&DEP_CD=ks00901&DOC_CD=2646">出生医学证明</a>`,
+            },
+            {
+                qid:10,
+                question:'如何建档？',
+                answer:`请点击底部导航栏中的"个人中心"，再点击"孕妇预建档"，就可以提前录入自己的信息进行建档。`,
+            },
+
+            {
+                qid:11,
+                question:'如何使用微信支付？',
+                answer:`目前微信支付只支持自费结算，如果您想刷医保卡或者要报销医保的，请移步医院收费窗口，凭处方单缴费。`,
+            },
+            {
+                qid:12,
+                question:'如何取消医院黑名单？',
+                answer:`黑名单等相关问题请到医院服务台咨询或拨打医院电话0315-3726688。`,
+            },
+            {
+                qid:13,
+                question:'如何查看化验结果？',
+                answer:`化验单、报告结果等信息请参考，或请咨询相关科室。`,
+            },
+            {
+                qid:14,
+                question:'如何办理住院出院？',
+                answer:`住院、出院或床位等相关问题请到医院服务台咨询,或拨打医院电话0315-3726688。`,
+            },
+            {
+                qid:15,
+                question:'四维彩超预约流程',
+                answer:`<a href="http://mp.weixin.qq.com/s/br5k_YRY9hlyTVSMzKEPsA ">四维彩超预约流程</a>`,
+            },
+            {
+                qid:16,
+                question:'唐筛预约流程',
+                answer:`<a href="http://mp.weixin.qq.com/s/QpLUW-ujXzlfNfCOEkZchg">唐筛预约流程</a>`,
+            },
+
+        ]
+    },
+
+    {
+        id:2,
+        listData:[
+            {
+                qid:1,
+                question:'医院地址',
+                answer:'医院地址为：山西省晋中市榆次区龙湖大街公共卫生服务中心。',
+            },
+            {
+                qid:2,
+                question:'医院二维码',
+                answer:`医院的二维码可以登陆官网查看，医院官网：'http://www.ycqfy.com'。`,
+            },
+            {
+                qid:3,
+                question:'医院电话',
+                answer:`<a href="https://mp.weixin.qq.com/s/Mn2AvF2STpPfkA3HrwO9lw">医院电话</a>`,
+            },
+            {
+                qid:4,
+                question:'门诊时间',
+                answer:`您好，门诊时间为冬季上午8:00-12:00，下午2:30-6:00；夏季上午8:00-12:00，下午3:00-6:00。详细信息请参考一周门诊。`,
+            },
+            {
+                qid:5,
+                question:'医生介绍',
+                answer:`<a href="http://mp.weixin.qq.com/s/ebPAyc0gMwbD-KQSVQ2m7Q">医生介绍</a>`,
+            },
+            {
+                qid:51,
+                question:'医生排班时间表',
+                answer:`每周五会发布下周的排班表，点击底部导航栏走进妇幼，再点击一周门诊即可查看。`,
+            },
+            {
+                qid:6,
+                question:'预约挂号流程',
+                answer:'我院实行实名制挂号，请您务必携带身份证。拿着导诊帮您填好的单据到大厅13号-15号窗口，挂您所需的科室或医生，同时您会收到挂号发票和一本门诊手册。（挂号发票到目标科室交与工作人员，门诊手册用于医生记录病情，并于复诊时携带）。详细信息请参考一周门诊。',
+            },
+            {
+                qid:7,
+                question:'各科室分布地图',
+                answer:`<a href="http://mp.weixin.qq.com/s/4qU5EKTfRkOdIEDIims_kw">各科室分布地图</a>`,
+            },
+            {
+                qid:8,
+                question:'如何办理医保报销？',
+                answer:`合作医疗、医保相关的问题请到医院服务台咨询,或拨打医院电话0354-8562999。目前微信支付只支持自费结算，如果您想刷医保卡或者要报销医保的，请移步医院收费窗口，凭处方单缴费。`,
+            },
+            {
+                qid:9,
+                question:'如何办理出生医学证明？',
+                answer:`<a href="http://mp.weixin.qq.com/s/fr34t4zS5xs6Sen_dKtGCg">出生医学证明</a>`,
+            },
+            {
+                qid:10,
+                question:'如何建档？',
+                answer:`您好，建档的相关问题，请到相关科室或医院服务台咨询或拨打医院电话0354-8562999。`,
+            },
+
+            {
+                qid:11,
+                question:'如何使用微信支付？',
+                answer:`目前微信支付只支持自费结算，如果您想刷医保卡或者要报销医保的，请移步医院收费窗口，凭处方单缴费。`,
+            },
+            {
+                qid:12,
+                question:'如何取消医院黑名单？',
+                answer:`黑名单等相关问题，请到医院服务台咨询或拨打医院电话0354-8562999。`,
+            },
+            {
+                qid:13,
+                question:'如何查看化验结果？',
+                answer:`化验单、报告结果等信息请咨询相关科室。`,
+            },
+            {
+                qid:14,
+                question:'如何办理住院出院？',
+                answer:`住院、出院或床位等相关问题请到医院服务台咨询,或拨打医院电话0354-8562999。`,
+            },
+            {
+                qid:15,
+                question:'四维彩超预约流程',
+                answer:`<a href="http://mp.weixin.qq.com/s/H4mIlkOp1mfaVaOX9-aCHQ">四维彩超预约流程</a>`,
+            },
+            {
+                qid:16,
+                question:'唐筛预约流程',
+                answer:`<a href="http://mp.weixin.qq.com/s/khsTMLJZWiK64V6Sa-sTdQ">唐筛预约流程</a>`,
+            },
+        ]
+    }
+];

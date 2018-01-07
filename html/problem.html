@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no"/> 
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="" />
+    <title>常见问题</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/frame.css">
+    <style>
+        body{
+            background-color: #ededed;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+<body>
+    <!-- <div class="g-problem" id="app" style="display:none;">
+        <ul class="m-question-lists">
+            <li v-for="item in hospitalData" @click="ToDetail(hospital_id,item.qid)">
+                {{item.question}}
+                <i class="more"></i>
+            </li>
+        </ul>
+    </div> -->
+    <div class="g-skill_detail" id="app">
+        <div class="m-skill-introduce">
+            <h2>医院常见问题：</h2>
+            <div class="m-skill-info">
+                <div class="u-skill-bg skill_24"></div>
+                <p>帮你解答医院类常见问题的咨询。你可以直接输入：“医院地址、四维彩超预约、唐筛预约”等相关关键词或者“产科在几楼？如何建档？”等具体的问题。我可以给你具体的答案哦~</p>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <span>示例如下</span>
+            </li>
+            <li class="question">
+                <!-- <img class="head-img"/> -->
+                <p>医院地址</p>
+            </li>
+            <li class="answer">
+                <!-- <img class="head-img"/> -->
+                <p>医院地址为：河北省唐山市路南区建设南路14号（百货大楼南行500米，大钊公园西门对面）。</p>
+            </li>
+            <li class="question">
+                <!-- <img class="head-img"/> -->
+                <p>科室分布图</p>
+            </li>
+            <li class="video" @click="Tourl('http://mp.gzhc365.com/hosp_floor_map_001.xhtml?viewcode=html_ld&HIS_CD=77')">
+                <div class="img-box">
+                    <img src="../static/images/keshi.png"> 
+                    <div class="img-bottom">科室分布图</div>
+                </div>
+                <p>请参考科室图，也可到服务台咨询...</p>
+                <div class="video-bottom"><span>详情</span> <i class="more"></i></div>
+            </li>
+            <li class="question">
+                    <!-- <img class="head-img"/> -->
+                    <p>四维彩超预约流程</p>
+            </li>
+            <li class="video" @click="Tourl('https://mp.weixin.qq.com/s/br5k_YRY9hlyTVSMzKEPsA')">
+                <div class="img-box">
+                    <img src="../static/images/siwei.png"> 
+                    <div class="img-bottom">在唐山妇幼做四维彩超的流程，你知道吗？</div>
+                </div>
+                <p>什么是四维彩超，注意事项...</p>
+                <div class="video-bottom"><span>详情</span> <i class="more"></i></div>
+            </li>
+            <li class="question">
+                    <!-- <img class="head-img"/> -->
+                    <p>唐筛预约流程</p>
+            </li>
+            <li class="video" @click="Tourl('https://mp.weixin.qq.com/s/QpLUW-ujXzlfNfCOEkZchg')">
+                <div class="img-box">
+                    <img src="../static/images/tangsai.png"> 
+                    <div class="img-bottom">怎样在唐山市妇幼保健院 免费做唐筛...</div>
+                </div>
+                <p>唐筛预约流程，相关知识点...</p>
+                <div class="video-bottom"><span>详情</span> <i class="more"></i></div>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="g-problem">
+        <ul class="m-question-lists">
+            <li>
+                不知道怎么问，可以先参考以下问题哦~
+            </li>
+            <li class="u-normal">
+                医院电话
+            </li>
+            <li class="u-normal">
+                医生排班时间表
+            </li>
+            <li class="u-normal">
+                如何预约挂号？
+            </li>
+            <li class="u-normal">
+                如何办理医保报销？
+            </li>
+            <li class="u-normal">
+                如何办理出生医学证明？
+            </li>
+            <li class="u-normal">
+                如何建档？
+            </li>
+            <li class="u-normal">
+                如何使用微信支付？
+            </li>
+            <li class="u-normal">
+                如何取消医院黑名单？
+            </li>
+            <li class="u-normal">
+                如何查看化验结果？
+            </li>
+            <li class="u-normal">
+                如何办理住院出院？
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="../static/js/vue.min.js"></script>
+<script src="../static/js/utils.js"></script>
+<script src="../static/js/hospital_data.js"></script>
+<script>
+
+var app = new Vue({
+    el: '#app',
+    data:{
+        hospital_id:'',
+        hospitalData:[],
+    },
+    mounted(){
+        let hospital_id = getUrlParam('hospital_id');
+        this.hospital_id = hospital_id;
+        if(hospital_id){
+            for(const item of hospitalData){
+                if(item.id == hospital_id){
+                    this.hospitalData = item.listData;
+                }
+            }
+        }
+    },
+    methods:{
+        ToDetail(hospital_id,qid){
+            location.href = `./problem_detail.html?hospital_id=${hospital_id}&qid=${qid}`;
+        },
+        Tourl(url){
+            location.href = url;
+        }
+    }
+
+});
+</script>
